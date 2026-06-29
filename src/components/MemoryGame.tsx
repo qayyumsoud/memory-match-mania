@@ -228,7 +228,7 @@ export default function MemoryGame() {
                   <button
                     key={card.id}
                     onClick={() => handleFlip(card.id)}
-                    className="group relative aspect-[3/4] [perspective:1000px]"
+                    className="group relative h-full w-full min-h-0 [perspective:1000px]"
                     aria-label={`Card ${card.id + 1}`}
                   >
                     <div
