@@ -261,6 +261,7 @@ export default function MemoryGame() {
                   </button>
                 );
               })}
+              </div>
             </div>
           )}
 
