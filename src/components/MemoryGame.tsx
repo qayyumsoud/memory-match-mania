@@ -164,7 +164,7 @@ export default function MemoryGame() {
       style={{ backgroundImage: "url(/bg.jpg)" }}
     >
       <div className="min-h-screen w-full bg-black/40 backdrop-blur-sm">
-        <div className="mx-auto max-w-5xl px-4 py-6">
+        <div className="mx-auto flex h-[calc(100vh-3rem)] max-w-5xl flex-col px-4 py-6">
           {/* Top bar */}
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-white/10 px-4 py-3 text-white shadow-lg backdrop-blur">
             <h1 className="text-2xl font-bold tracking-wide">Memory Game</h1>
@@ -217,17 +217,18 @@ export default function MemoryGame() {
 
           {/* Board */}
           {(status === "playing" || status === "won" || status === "lost") && (
-            <div
-              className={`grid ${gridCols} gap-3 sm:gap-4`}
-              style={{ gridTemplateRows: `repeat(${gridRows}, minmax(0, 1fr))` }}
-            >
+            <div className="flex-1 min-h-0">
+              <div
+                className={`grid h-full ${gridCols} gap-3 sm:gap-4`}
+                style={{ gridTemplateRows: `repeat(${gridRows}, minmax(0, 1fr))` }}
+              >
               {cards.map((card) => {
                 const showFace = card.flipped || card.matched;
                 return (
                   <button
                     key={card.id}
                     onClick={() => handleFlip(card.id)}
-                    className="group relative aspect-[3/4] [perspective:1000px]"
+                    className="group relative h-full w-full min-h-0 [perspective:1000px]"
                     aria-label={`Card ${card.id + 1}`}
                   >
                     <div
@@ -238,8 +239,7 @@ export default function MemoryGame() {
                       {/* Back */}
                       <div className="absolute inset-0 overflow-hidden rounded-xl bg-gradient-to-br from-slate-700 to-slate-900 [backface-visibility:hidden]">
                         <img
-                        src={`/back-card-${level}.png`}
-
+                          src={`/back-card-${level}.png`}
                           alt="Card back"
                           className="h-full w-full object-contain p-2"
                         />
@@ -260,6 +260,7 @@ export default function MemoryGame() {
                   </button>
                 );
               })}
+              </div>
             </div>
           )}
 
