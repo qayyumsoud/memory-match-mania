@@ -217,10 +217,11 @@ export default function MemoryGame() {
 
           {/* Board */}
           {(status === "playing" || status === "won" || status === "lost") && (
-            <div
-              className={`grid ${gridCols} gap-3 sm:gap-4`}
-              style={{ gridTemplateRows: `repeat(${gridRows}, minmax(0, 1fr))` }}
-            >
+            <div className="flex-1 min-h-0">
+              <div
+                className={`grid h-full ${gridCols} gap-3 sm:gap-4`}
+                style={{ gridTemplateRows: `repeat(${gridRows}, minmax(0, 1fr))` }}
+              >
               {cards.map((card) => {
                 const showFace = card.flipped || card.matched;
                 return (
