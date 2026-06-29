@@ -239,8 +239,7 @@ export default function MemoryGame() {
                       {/* Back */}
                       <div className="absolute inset-0 overflow-hidden rounded-xl bg-gradient-to-br from-slate-700 to-slate-900 [backface-visibility:hidden]">
                         <img
-                        src={`/back-card-${level}.png`}
-
+                          src={`/back-card-${level}.png`}
                           alt="Card back"
                           className="h-full w-full object-contain p-2"
                         />
