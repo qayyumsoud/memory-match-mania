@@ -164,7 +164,7 @@ export default function MemoryGame() {
       style={{ backgroundImage: "url(/bg.jpg)" }}
     >
       <div className="min-h-screen w-full bg-black/40 backdrop-blur-sm">
-        <div className="mx-auto flex min-h-[calc(100vh-3rem)] max-w-5xl flex-col px-4 py-6">
+        <div className="mx-auto flex h-[calc(100vh-3rem)] max-w-5xl flex-col px-4 py-6">
           {/* Top bar */}
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-xl bg-white/10 px-4 py-3 text-white shadow-lg backdrop-blur">
             <h1 className="text-2xl font-bold tracking-wide">Memory Game</h1>
