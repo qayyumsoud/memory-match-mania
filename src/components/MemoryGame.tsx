@@ -11,8 +11,8 @@ interface Card {
 }
 
 const LEVEL_CONFIG: Record<Level, { pairs: number; time: number }> = {
-  1: { pairs: 5, time: 30 },
-  2: { pairs: 10, time: 70 },
+  1: { pairs: 5, time: 20 },
+  2: { pairs: 10, time: 60 },
 };
 
 const shuffle = <T,>(arr: T[]): T[] => {
@@ -203,13 +203,13 @@ export default function MemoryGame() {
                   onClick={() => startLevel(1)}
                   className="rounded-xl bg-emerald-500 px-6 py-3 text-lg font-semibold shadow transition hover:bg-emerald-600"
                 >
-                  Level 1 · 10 cards · 30s
+                  Level 1 · 10 cards · 20s
                 </button>
                 <button
                   onClick={() => startLevel(2)}
                   className="rounded-xl bg-indigo-500 px-6 py-3 text-lg font-semibold shadow transition hover:bg-indigo-600"
                 >
-                  Level 2 · 20 cards · 70s
+                  Level 2 · 20 cards · 60s
                 </button>
               </div>
             </div>
